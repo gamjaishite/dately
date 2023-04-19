@@ -1,0 +1,17 @@
+before_script:
+  - cd src
+  - python --version  # For debugging
+  - python -m pip install virtualenv
+  - python -m virtualenv .
+  - ./Scripts/activate
+
+stages:
+  - Test
+
+build:
+  tags: 
+    - ci
+  stage: Test
+  script:
+    - python -m pip install --default-timeout=100 -r requirements.txt
+    - pytest --ignore=Lib --ignore=Include --ignore=Script Tests/

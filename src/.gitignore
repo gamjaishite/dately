@@ -1,0 +1,12 @@
+include/
+Lib/
+Scripts/
+pyvenv.cfg
+.vscode/
+/.idea/
+.idea/
+__pycache__
+database.db
+/bin/
+bin/
+.pytest_cache
